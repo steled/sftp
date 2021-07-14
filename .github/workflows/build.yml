@@ -38,8 +38,8 @@ jobs:
             org.opencontainers.image.revision=${GITHUB_SHA}
             org.opencontainers.image.created=$(date --rfc-3339=seconds)
           tags: |
-            ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:debian
+            latest
+            debian
 
       - name: Docker meta - alpine
         id: meta_alpine
@@ -51,7 +51,7 @@ jobs:
             org.opencontainers.image.revision=${GITHUB_SHA}
             org.opencontainers.image.created=$(date --rfc-3339=seconds)
           tags: |
-            ${{ env.IMAGE_NAME }}:alpine
+            alpine
 
       - name: Build debian image
         run: |
