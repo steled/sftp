@@ -62,7 +62,7 @@ jobs:
 #          import-github-users: atmoz  
 
       - name: Login to Dockerhub
-        users: docker/login-action@v1 
+        uses: docker/login-action@v1 
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
