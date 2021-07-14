@@ -34,12 +34,12 @@ jobs:
         with:
           images: ${{ env.IMAGE_NAME }}:debian
           labels: |
-            org.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
-            org.opencontainers.image.revision=${GITHUB_SHA}
+            org.opencontainers.image.source=${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}
+            org.opencontainers.image.revision=${{ GITHUB_SHA }}
             org.opencontainers.image.created=$(date --rfc-3339=seconds)
           tags: |
-            ${{ env.IMAGE_NAME }}:latest
-            ${{ env.IMAGE_NAME }}:debian
+            latest
+            debian
 
       - name: Docker meta - alpine
         id: meta_alpine
@@ -47,11 +47,11 @@ jobs:
         with:
           images: ${{ env.IMAGE_NAME }}:alpine
           labels: |
-            org.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}
-            org.opencontainers.image.revision=${GITHUB_SHA}
+            org.opencontainers.image.source=${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}
+            org.opencontainers.image.revision=${{ GITHUB_SHA }}
             org.opencontainers.image.created=$(date --rfc-3339=seconds)
           tags: |
-            ${{ env.IMAGE_NAME }}:alpine
+            alpine
 
       - name: Build debian image
         run: |
@@ -60,8 +60,8 @@ jobs:
             --file=Dockerfile \
             --tag="${{ env.IMAGE_NAME }}:latest" \
             --tag="${{ env.IMAGE_NAME }}:debian" \
-            --label="org.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}" \
-            --label="org.opencontainers.image.revision=${GITHUB_SHA}" \
+            --label="org.opencontainers.image.source=${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}" \
+            --label="org.opencontainers.image.revision=${{ GITHUB_SHA }}" \
             --label="org.opencontainers.image.created=$(date --rfc-3339=seconds)"
 
       - name: Test debian image
@@ -73,8 +73,8 @@ jobs:
             --pull=true \
             --file=Dockerfile-alpine \
             --tag="${{ env.IMAGE_NAME }}:alpine" \
-            --label="org.opencontainers.image.source=${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}" \
-            --label="org.opencontainers.image.revision=${GITHUB_SHA}" \
+            --label="org.opencontainers.image.source=${{ GITHUB_SERVER_URL }}/${{ GITHUB_REPOSITORY }}" \
+            --label="org.opencontainers.image.revision=${{ GITHUB_SHA }}" \
             --label="org.opencontainers.image.created=$(date --rfc-3339=seconds)"
 
       - name: Test alpine image
