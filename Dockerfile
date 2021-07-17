@@ -1,5 +1,5 @@
 FROM debian:buster
-MAINTAINER Adrian Dvergsdal [atmoz.net]
+LABEL author="Adrian Dvergsdal [atmoz.net]"
 
 # Steps done in one RUN layer:
 # - Install packages
