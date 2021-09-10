@@ -118,7 +118,7 @@ jobs:
           platforms: linux/arm64,linux/amd64
           push: true
           tags: |
-            steled/sftp:debian--${{ env.DEBIAN_VERSION }}
+            steled/sftp:debian-${{ env.DEBIAN_VERSION }}
 
       - name: Build and publish alpine arm64 images
         uses: docker/build-push-action@v2
@@ -129,4 +129,4 @@ jobs:
           platforms: linux/arm64,linux/amd64
           push: true
           tags: |
-             steled/sftp:alpine--${{ env.ALPINE_VERSION }}
+             steled/sftp:alpine-${{ env.ALPINE_VERSION }}
