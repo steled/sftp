@@ -1,13 +1,13 @@
 # SFTP
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/atmoz/sftp/build?logo=github) ![GitHub stars](https://img.shields.io/github/stars/atmoz/sftp?logo=github) ![Docker Stars](https://img.shields.io/docker/stars/atmoz/sftp?label=stars&logo=docker) ![Docker Pulls](https://img.shields.io/docker/pulls/atmoz/sftp?label=pulls&logo=docker)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/steled/sftp/build?logo=github) ![GitHub stars](https://img.shields.io/github/stars/steled/sftp?logo=github) ![Docker Stars](https://img.shields.io/docker/stars/steled/sftp?label=stars&logo=docker) ![Docker Pulls](https://img.shields.io/docker/pulls/steled/sftp?label=pulls&logo=docker)
 
-![OpenSSH logo](https://raw.githubusercontent.com/atmoz/sftp/master/openssh.png "Powered by OpenSSH")
+![OpenSSH logo](https://raw.githubusercontent.com/steled/sftp/master/openssh.png "Powered by OpenSSH")
 
 # Supported tags and respective `Dockerfile` links
 
-- [`debian`, `latest` (*Dockerfile*)](https://github.com/atmoz/sftp/blob/master/Dockerfile) ![Docker Image Size (debian)](https://img.shields.io/docker/image-size/atmoz/sftp/debian?label=debian&logo=debian&style=plastic)
-- [`alpine` (*Dockerfile*)](https://github.com/atmoz/sftp/blob/master/Dockerfile-alpine) ![Docker Image Size (alpine)](https://img.shields.io/docker/image-size/atmoz/sftp/alpine?label=alpine&logo=Alpine%20Linux&style=plastic)
+- [`debian` (*Dockerfile*)](https://github.com/steled/sftp/blob/master/Dockerfile) ![Docker Image Size (debian)](https://img.shields.io/docker/image-size/steled/sftp/debian-buster?label=debian&logo=debian&style=plastic)
+- [`alpine` (*Dockerfile*)](https://github.com/steled/sftp/blob/master/Dockerfile-alpine) ![Docker Image Size (alpine)](https://img.shields.io/docker/image-size/steled/sftp/alpine-3.13.6?label=alpine&logo=Alpine%20Linux&style=plastic)
 
 # Securely share your files
 
