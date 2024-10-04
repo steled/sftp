@@ -1,5 +1,5 @@
-FROM alpine:3.13.6
-LABEL author="Adrian Dvergsdal [atmoz.net]"
+FROM alpine:3.20.3
+LABEL author="Adri.an Dvergsdal [atmoz.net]"
 
 # Steps done in one RUN layer:
 # - Install packages

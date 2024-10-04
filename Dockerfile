@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:bookworm-slim
 LABEL author="Adrian Dvergsdal [atmoz.net]"
 
 # Steps done in one RUN layer:
